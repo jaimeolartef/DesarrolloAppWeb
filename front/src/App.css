@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Style para la aplicacion */
+
+/* Estilos base para el encabezado */
+.header {
+  background-color: #193509; /* Fondo azul oscuro */
+  color: white; /* Texto blanco */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Estilos para el contenedor del logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para la imagen del logo */
+.logo-container img {
+  height: 50px; /* Ajustar según sea necesario */
+}
+
+/* Estilos para el texto del logo */
+.logo-text h1,
+.logo-text p {
+  margin: 0;
+}
+
+/* Estilos para la navegación */
+.navigation {
+  display: flex;
+}
+
+/* Estilos para los enlaces */
+.navigation a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Estilos para la información del usuario */
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para los botones de notificación y mensaje */
+.notification-button,
+.message-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilos para las iniciales del usuario */
+.user-initials {
+  background-color: red; /* Fondo rojo para el indicador de notificación */
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+/* Iconos */
+.icon-bell,
+.icon-envelope {
+  font-size: 20px; /* Ajustar según sea necesario */
+}
+
+.div-container {
+  width: 70%;
+  margin: 0 auto; /* Centra la tabla en la página */
+}
+
+.div-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Esto establece la altura del contenedor al 100% de la altura de la ventana gráfica */
+}
