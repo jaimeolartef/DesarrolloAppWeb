@@ -1,0 +1,16 @@
+{
+  "name": "desarrolloappweb",
+  "version": "1.0.0",
+  "description": "app web",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jaime Andres Alberto Olarte Fuentes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
