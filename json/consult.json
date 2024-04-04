@@ -1,0 +1,27 @@
+[
+    {
+        "tipoDocumento": "Cédula de Ciudadanía",
+        "documento": "12345678",
+        "nombre": "Juan Perez",
+        "fechaNacimiento": "1990-01-01",
+        "telefono": "123456789",
+        "correo": "juanperez@example.com"
+    },
+    {
+        "tipoDocumento": "Pasaporte",
+        "documento": "A12345678",
+        "nombre": "Maria Sanchez",
+        "fechaNacimiento": "1985-05-10",
+        "telefono": "987654321",
+        "correo": "mariasanchez@example.com"
+    },
+    {
+        "tipoDocumento": "Cédula Extranjería",
+        "documento": "B87654321",
+        "nombre": "Carlos Rodriguez",
+        "fechaNacimiento": "1978-12-15",
+        "telefono": "456789123",
+        "correo": "carlosrodriguez@example.com"
+    }
+
+]

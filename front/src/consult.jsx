@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Table from 'react-bootstrap/Table';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
 
 const Consult = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get('/consult/data');
+      setData(response.data);
+    };
+
+    fetchData();
+  }, [])
+
   return (
 
     <div className="div-container">
@@ -21,15 +33,16 @@ const Consult = () => {
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>...</td>
-          <td>...</td>
-          <td>...</td>
-          <td>...</td>
-          <td>...</td>
-          <td>...</td>
-        </tr>
-        {/* Puedes agregar más filas de datos aquí */}
+          {data && data.map((item, index) => (
+            <tr key={index}>
+              <td>{item.tipoDocumento}</td>
+              <td>{item.documento}</td>
+              <td>{item.nombre}</td>
+              <td>{item.fechaNacimiento}</td>
+              <td>{item.telefono}</td>
+              <td>{item.correo}</td>
+            </tr>
+          ))}
         </tbody>
       </Table>
     </div>
