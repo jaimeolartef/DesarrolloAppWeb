@@ -17,6 +17,7 @@ const Header = () => {
         <Link to="/">Página Principal</Link>
         <Link to="/register">Registro</Link>
         <Link to="/consult">Consultar</Link>
+        <Link to="/activity">Registro de actividades diarias</Link>
       </nav>
     </header>
   );

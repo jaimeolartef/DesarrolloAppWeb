@@ -23,24 +23,24 @@ const Consult = () => {
       <br/>
       <Table striped bordered hover>
         <thead>
-        <tr>
-          <th>Tipo Documento</th>
-          <th>Documento</th>
-          <th>Nombre</th>
-          <th>Fecha Nacimiento</th>
-          <th>Telefono</th>
-          <th>Correo electronico</th>
-        </tr>
+          <tr>
+            <th>Tipo Documento</th>
+            <th>Documento</th>
+            <th>Nombre</th>
+            <th>Fecha Nacimiento</th>
+            <th>Telefono</th>
+            <th>Correo electronico</th>
+          </tr>
         </thead>
         <tbody>
-          {data && data.map((item, index) => (
+          {data?.map((item, index) => (
             <tr key={index}>
-              <td>{item.tipoDocumento}</td>
-              <td>{item.documento}</td>
-              <td>{item.nombre}</td>
-              <td>{item.fechaNacimiento}</td>
-              <td>{item.telefono}</td>
-              <td>{item.correo}</td>
+              <td>{item?.tipoDocumento}</td>
+              <td>{item?.documento}</td>
+              <td>{item?.nombre}</td>
+              <td>{item?.fechaNacimiento}</td>
+              <td>{item?.telefono}</td>
+              <td>{item?.correo}</td>
             </tr>
           ))}
         </tbody>

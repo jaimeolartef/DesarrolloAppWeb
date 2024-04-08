@@ -26,6 +26,16 @@ app.get('/consult', function (req, res) {
     res.sendFile(dir_front + "/front/build/index.html")
 })
 
+app.get('/activity', function (req, res) {
+    res.sendFile(dir_front + "/front/build/index.html")
+})
+
+app.get('/activity/data', function (req, res) {
+    const user = req.body;
+    console.log(user);
+    res.sendStatus(200);
+})
+
 app.get('/consult/data', function (req, res) {
     res.json(data)
 })
