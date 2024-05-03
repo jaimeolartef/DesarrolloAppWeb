@@ -5,6 +5,7 @@ import fs from 'fs'
 import { guardarUsuario } from './db.js';
 import { consultarUsuario } from './db.js';
 import { guardarActividad } from './db.js';
+import { consultarActividades } from './db.js';
 
 
 const app = ex();
@@ -70,4 +71,14 @@ app.post('/activity/register', function (req, res) {
     guardarActividad(activity);
 
     res.sendStatus(200);
+});
+
+app.get('/activity/consult', function (req, res) {
+    consultarActividades().then(actividad => {
+        console.log('consulto actividades', actividad);
+        res.json(actividad);
+    }).catch(error => {
+        console.error('Error al consultar usuarios:', error);
+        res.status(500).send('Error en el servidor');
+    });
 });

@@ -17,7 +17,6 @@ const Consult = () => {
   }, [])
 
   return (
-
     <div className="div-container">
       <br/>
       <br/>

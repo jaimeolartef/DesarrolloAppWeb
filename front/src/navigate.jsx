@@ -15,9 +15,10 @@ const Header = () => {
       </div>
       <nav className="navigation">
         <Link to="/">Página Principal</Link>
-        <Link to="/register">Registro</Link>
-        <Link to="/consult">Consultar</Link>
+        <Link to="/register">Registro Usuario</Link>
+        <Link to="/consult">Consultar Usuario</Link>
         <Link to="/activity">Registro de actividades diarias</Link>
+        <Link to="/activityconsult">Consulta de actividades diarias</Link>
       </nav>
     </header>
   );

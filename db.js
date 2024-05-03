@@ -80,3 +80,19 @@ export function guardarActividad(datosActividad) {
         console.log('Actividad insertada:', rows.insertId);
     });
 }
+
+
+export function consultarActividades() {
+    return new Promise((resolve, reject) => {
+        const sql = 'SELECT u.nombre,a.descripcion,a.fecha_actividad,a.hora_inicio,a.hora_fin FROM `actividades` a inner join `usuario` u on a.id_usuario = u.id'
+        conexion.query(sql, (err, rows, fields) => {
+            if (err) {
+                console.error(err);
+                reject(err);
+            } else {
+                console.log('Actividades consultadas:', rows);
+                resolve(rows);
+            }
+        });
+    });
+}

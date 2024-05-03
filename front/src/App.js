@@ -5,6 +5,7 @@ import Register from './register';
 import Consult from './consult';
 import Home from './home';
 import Activity from './activity';
+import ActivityConsult from './activityconsult';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/register" element={<Register/>}/>
             <Route path="/consult" element={<Consult/>}/>
             <Route path="/activity" element={<Activity/>}/>
+            <Route path="/activityconsult" element={<ActivityConsult/>}/>
           </Routes>
         </Router>
       </div>
