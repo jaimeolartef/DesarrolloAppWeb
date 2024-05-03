@@ -7,7 +7,11 @@ const Body = () => {
     // Define tus estados aquí
     const [selectedUser, setSelectedUser] = useState('');
     const [newActivity, setNewActivity] = useState({
+        selectedUser: '',
         description: '',
+        date: '',
+        start: '',
+        end: ''
         // Agrega aquí los otros campos de tu actividad
     });
 
@@ -26,7 +30,7 @@ const Body = () => {
     const handleActivitySubmit = async (event) => {
         event.preventDefault();
 
-        const response = await axios.post('/register/data', newActivity);
+        const response = await axios.post('/activity/register', newActivity);
 
         if (response.status === 200) {
             alert('El registro ha sido exitoso');
@@ -52,11 +56,12 @@ const Body = () => {
             <form onSubmit={handleActivitySubmit}>
                 <div className="mb-3">
                     <label className="form-label">Usuario:</label>
-                    <select value={selectedUser} onChange={handleUserChange} className="form-control">
+                    <select name="selectedUser" value={newActivity.selectedUser} onChange={handleInputChange}
+                            className="form-control">
                         {data?.map((user, index) => (
-                            <option key={index} value={user?.documento}>
-                                {user?.nombre}
-                            </option>
+                          <option key={index} value={user?.id}>
+                              {user?.nombre}
+                          </option>
                         ))}
                     </select>
                 </div>
@@ -64,7 +69,7 @@ const Body = () => {
                 <div className="mb-3">
                     <label className="form-label">Descripción de la Actividad:</label>
                     <input type="text" name="description" value={newActivity.description} onChange={handleInputChange}
-                        className="form-control" />
+                           className="form-control" />
                 </div>
 
                 <div className="mb-3">

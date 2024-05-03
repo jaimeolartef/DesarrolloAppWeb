@@ -4,6 +4,7 @@ import data from './json/consult.json' assert { type: 'json' }
 import fs from 'fs'
 import { guardarUsuario } from './db.js';
 import { consultarUsuario } from './db.js';
+import { guardarActividad } from './db.js';
 
 
 const app = ex();
@@ -56,6 +57,17 @@ app.post('/register/data', function (req, res) {
     //const data = JSON.parse(fs.readFileSync(dir.resolve('./json/consult.json'), 'utf8'));
 
     guardarUsuario(user);
+
+    res.sendStatus(200);
+});
+
+app.post('/activity/register', function (req, res) {
+    const activity = req.body;
+    console.log(activity);
+    // Synchronous read
+    //const data = JSON.parse(fs.readFileSync(dir.resolve('./json/consult.json'), 'utf8'));
+
+    guardarActividad(activity);
 
     res.sendStatus(200);
 });

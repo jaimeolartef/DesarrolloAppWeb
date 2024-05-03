@@ -62,3 +62,21 @@ export function guardarUsuario(datosUsuario) {
         console.log('Usuario insertado:', rows.insertId);
     });    
 }
+
+export function guardarActividad(datosActividad) {
+    const actividadValores = [
+        datosActividad.description,
+        datosActividad.date,
+        datosActividad.start,
+        datosActividad.end,
+        datosActividad.selectedUser
+    ];
+    const sql = 'INSERT INTO `db-actividades`.actividades (descripcion, fecha_actividad, hora_inicio, hora_fin, id_usuario) VALUES(?,?,?,?,?)';
+    conexion.query(sql, actividadValores, (err, rows, fields) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        console.log('Actividad insertada:', rows.insertId);
+    });
+}
