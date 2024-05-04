@@ -39,7 +39,7 @@ const Body = () => {
       <br/>
       <br/>
       <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="formBasicEmail">
+        <Form.Group controlId="documentType">
           <Form.Label>Tipo de Documento</Form.Label>
           <Form.Select aria-label="Seleccione el tipo de documento" value={tipoDocumento} onChange={e => setTipoDocumento(e.target.value)} required>
             <option>Seleccione el tipo de documento</option>
@@ -49,27 +49,27 @@ const Body = () => {
           </Form.Select>
         </Form.Group>
         <br/>
-        <Form.Group controlId="formBasicPassword">
+        <Form.Group controlId="document">
           <Form.Label>Documento</Form.Label>
           <Form.Control type="text" placeholder="Ingrese el documento" value={documento} onChange={e => setDocumento(e.target.value)} required/>
         </Form.Group>
 
-        <Form.Group controlId="formBasicPassword">
+        <Form.Group controlId="name">
           <Form.Label>Nombre</Form.Label>
           <Form.Control type="text" placeholder="Ingrese el nombre" value={nombre} onChange={e => setNombre(e.target.value)} required/>
         </Form.Group>
 
-        <Form.Group controlId="formBasicPassword">
+        <Form.Group controlId="birthday">
           <Form.Label>Fecha de Nacimiento</Form.Label>
           <Form.Control type="date" placeholder="Ingrese la fecha de nacimiento" value={fechaNacimiento} onChange={e => setFechaNacimiento(e.target.value)} required/>
         </Form.Group>
 
-        <Form.Group controlId="formBasicPassword">
+        <Form.Group controlId="phone">
           <Form.Label>Teléfono</Form.Label>
           <Form.Control type="text" placeholder="Ingrese el teléfono" value={telefono} onChange={e => setTelefono(e.target.value)} required/>
         </Form.Group>
 
-        <Form.Group controlId="formBasicPassword">
+        <Form.Group controlId="email">
           <Form.Label>Correo Electrónico</Form.Label>
           <Form.Control type="email" placeholder="Ingrese el correo electrónico" value={correo} onChange={e => setCorreo(e.target.value)} required/>
         </Form.Group>

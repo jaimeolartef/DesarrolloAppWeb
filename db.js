@@ -53,7 +53,7 @@ export function guardarUsuario(datosUsuario) {
         datosUsuario.telefono,
         datosUsuario.correo
     ];
-    const sql = 'INSERT INTO `db-actividades`.usuario (tipo_documento, documento, nombre, fechaNacimiento, telefono, correo) VALUES(?,?,?,?,?,?)';
+    const sql = 'INSERT INTO `db-actividades`.usuario (tipoDocumento, documento, nombre, fechaNacimiento, telefono, correo) VALUES(?,?,?,?,?,?)';
     conexion.query(sql, usuarioValores, (err, rows, fields) => {
         if (err) {
             console.error(err);
